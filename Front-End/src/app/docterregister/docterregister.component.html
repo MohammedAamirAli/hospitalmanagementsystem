@@ -1,0 +1,58 @@
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form >
+                <fieldset>
+                    <legend class="text-center">Registration Form </legend>
+
+                    <!--<div class="form-group">
+                        <label for="ID"><span class="req">* </span> ID: <small>This will be your login user
+                                name</small> </label>
+                        <input class="form-control" type="number" [(ngModel)]="patientinfo.id" name="Id" id="ID"
+                             maxlength="28" />
+                    </div>-->
+                    <br>
+
+                    <div class="form-group">
+                        <label for="doctorname"><span class="req">* </span> DocterName: </label>
+                        <input class="form-control" type="text" [(ngModel)]="docterinfo.doctorname" name="doctorname" id="txt" required
+                            />
+                        
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="specializedfield"><span class="req">* </span> SpecializedField: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="docterinfo.specializedfield" name="specializedfield"
+                         />
+                        <div class="status" id="status"></div>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="noofattendees"><span class="req">* </span> No Of Attendees : </label>
+                        <input class="form-control" type="text" [(ngModel)]="docterinfo.noofattendees" name="noofattendees" id="txt"
+                             required />
+                        <div id="errLast"></div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registernow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
+

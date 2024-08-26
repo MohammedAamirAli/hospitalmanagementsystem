@@ -1,0 +1,58 @@
+<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"></script>
+
+<!--<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!------ Include the above in your HEAD tag ---------->
+
+<div style="margin-left: 50px;">
+
+    <br>
+            <span><strong>Select Doctor's Name:</strong></span>
+        <div style="display: flex;"class="form-group col-md-6">
+  
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="doctorname" aria-placeholder="Enter the Docter-Name"  (click)="finddoctors()">
+                <option *ngFor="let docter of founddoctor" [value]="docter.doctorname">{{docter.doctorname}}</option>
+             </select>
+            
+        
+        <button id="search-button" type="button" class="btn btn-primary"(click)="finddoctorBydoctorname()">
+          <i class="fas fa-search">search</i>
+        </button>
+      </div>
+        <br>
+        <div style="margin-left: 45px;">
+            
+                <div class="col-md-7">
+                <table class="table table-striped">
+                <thead>
+                    <tr>
+                        
+                        <th>Doctor Name</th>
+                    
+                        <th>SpecializedField</th>
+                        <th>No.of Attendees</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let doctor of doctors">
+                        
+                        <td>{{doctor.doctorname}}</td>
+                        <td>{{doctor.specializedfield}}</td>
+                        <td>{{doctor.noofattendees}}</td>
+                       
+                        
+                      </tr>
+                </tbody>
+                </table>
+                </div>
+        </div>
+
+
+
+</div>
+
+    
+
+
+
+
